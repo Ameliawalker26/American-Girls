@@ -178,9 +178,9 @@
                 <div class="flex items-center justify-between pb-2 border-b border-pink-100 mb-2">
                     <div class="flex items-center gap-2">
                         <div class="flex -space-x-2">
-                            <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-300 overflow-hidden"><img src="https://picsum.photos/seed/girl1/48/48.jpg" class="object-cover w-full h-full"></span>
-                            <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-300 overflow-hidden"><img src="https://picsum.photos/seed/girl2/48/48.jpg" class="object-cover w-full h-full"></span>
-                            <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-300 overflow-hidden"><img src="https://picsum.photos/seed/girl3/48/48.jpg" class="object-cover w-full h-full"></span>
+                            <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-300 overflow-hidden"><img src="https://b-cdn.grbto.net/6a2f55c11707f-1781487041.jpg" class="object-cover w-full h-full"></span>
+                            <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-300 overflow-hidden"><img src="https://b-cdn.grbto.net/6a2f55e16085e-1781487073.jpg" class="object-cover w-full h-full"></span>
+                            <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-300 overflow-hidden"><img src="https://b-cdn.grbto.net/6a2f55eabe278-1781487082.jpg" class="object-cover w-full h-full"></span>
                         </div>
                         <div>
                             <p class="text-xs font-black text-gray-800 leading-none">VIP Room: American Babes 🔞</p>
@@ -278,37 +278,37 @@
             {
                 name: "Emily Watson",
                 age: 22,
-                image: "https://picsum.photos/seed/emily22/640/960.jpg",
+                image: "https://b-cdn.grbto.net/6a2f55c11707f-1781487041.jpg",
                 distance: "Just 1.2 miles away from you"
             },
             {
                 name: "Ashley Davis",
                 age: 24,
-                image: "https://picsum.photos/seed/ashley24/640/960.jpg",
+                image: "https://b-cdn.grbto.net/6a2f55e16085e-1781487073.jpg",
                 distance: "Just 0.8 miles away from you"
             },
             {
                 name: "Brianna Taylor",
                 age: 23,
-                image: "https://picsum.photos/seed/brianna23/640/960.jpg",
+                image: "https://b-cdn.grbto.net/6a2f55eabe278-1781487082.jpg",
                 distance: "Just 2.5 miles away from you"
             },
             {
                 name: "Madison Snyder",
                 age: 21,
-                image: "https://picsum.photos/seed/madison21/640/960.jpg",
+                image: "https://b-cdn.grbto.net/6a2f55feb091b-1781487102.jpg",
                 distance: "Just 1.9 miles away from you"
             }
         ];
 
         // Ganti pesan chat sesuai kebutuhan
         const GROUP_CONVERSATIONS = [
-            { sender: "Emily Watson", img: "https://picsum.photos/seed/girl1/48/48.jpg", message: "Hey gorgeous... Why are you just looking at our photos? Come say hi to me 😘" },
-            { sender: "Ashley Davis", img: "https://picsum.photos/seed/girl2/48/48.jpg", message: "Exactly honey! Join our private room. The four of us are so lonely tonight... 🙈" },
-            { sender: "Brianna Taylor", img: "https://picsum.photos/seed/girl3/48/48.jpg", message: "I just got out of the shower... I really want to video call but nobody's online yet 😭" },
-            { sender: "Madison Snyder", img: "https://picsum.photos/seed/girl4/48/48.jpg", message: "Do you want to keep Brianna warm? Hurry up and click the buttons below to connect! 🔥" },
-            { sender: "Emily Watson", img: "https://picsum.photos/seed/girl1/48/48.jpg", message: "Honestly, whoever clicks first gets a very special photo from me right now! 💋" },
-            { sender: "Ashley Davis", img: "https://picsum.photos/seed/girl2/48/48.jpg", message: "Don't make us wait sweetie... Join before we close this private room! 🖤💄" }
+            { sender: "Emily Watson", img: "https://b-cdn.grbto.net/6a2f55c11707f-1781487041.jpg", message: "Hey gorgeous... Why are you just looking at our photos? Come say hi to me 😘" },
+            { sender: "Ashley Davis", img: "https://b-cdn.grbto.net/6a2f55e16085e-1781487073.jpg", message: "Exactly honey! Join our private room. The four of us are so lonely tonight... 🙈" },
+            { sender: "Brianna Taylor", img: "https://b-cdn.grbto.net/6a2f55eabe278-1781487082.jpg", message: "I just got out of the shower... I really want to video call but nobody's online yet 😭" },
+            { sender: "Madison Snyder", img: "https://b-cdn.grbto.net/6a2f55feb091b-1781487102.jpg", message: "Do you want to keep Brianna warm? Hurry up and click the buttons below to connect! 🔥" },
+            { sender: "Emily Watson", img: "https://b-cdn.grbto.net/6a2f55c11707f-1781487041.jpg", message: "Honestly, whoever clicks first gets a very special photo from me right now! 💋" },
+            { sender: "Ashley Davis", img: "https://b-cdn.grbto.net/6a2f55e16085e-1781487073.jpg", message: "Don't make us wait sweetie... Join before we close this private room! 🖤💄" }
         ];
 
         let currentProfileIndex = 0;
@@ -390,7 +390,7 @@
                 img.id = 'slide-' + index;
                 img.className = 'absolute inset-0 w-full h-full object-cover slide-transition ' + (index === 0 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 z-0');
                 img.onerror = function() {
-                    this.src = 'https://placehold.co/600x800/ffd1d1/c9184a?text=' + encodeURIComponent(profile.name);
+                    this.src = `https://placehold.co/600x800/ffd1d1/c9184a?text=${profile.name}`;
                 };
                 container.appendChild(img);
 
