@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Room - Meet Hot American Girls 💋</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
+    <meta property="og:title" content="VIP ROOM – Meet Singles Around the World">
+    <meta property="og:description" content="An inclusive space for deep conversations, new friendships, or meaningful relationships.">
+    <meta property="og:image" content="https://b-cdn.grbto.net/6a2fae84d66dc-1781509764.png?auto=format&fit=crop&w=1200&h=630&q=80">
+    <link rel="icon" type="image/png" href="https://b-cdn.grbto.net/6a2563fa7e139-1780835322.png?auto=format&fit=crop&w=32&h=32&q=80">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        luxury: {
+                            gold: '#D4AF37',
+                            goldHover: '#F3E5AB',
+                            darkBg: '#090514',
+                            cardBg: '#130B24',
+                            accent: '#F43F5E'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #fff5f6 0%, #ffeef0 50%, #ffd6db 100%);
+            overflow: hidden;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .heart-particle {
+            position: absolute;
+            pointer-events: none;
+            animation: floatUp 3s linear infinite;
+            opacity: 0;
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) scale(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% {
+                transform: translateY(-10vh) scale(1.3) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        @keyframes pulse-live {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(239, 68, 68, 0.7); }
+            50% { transform: scale(1.02); box-shadow: 0 0 25px rgba(239, 68, 68, 0.95); }
+        }
+        .pulse-btn-live {
+            animation: pulse-live 1.8s infinite;
+        }
+        .slide-transition {
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+        @keyframes popIn {
+            0% { transform: translateY(15px) scale(0.95); opacity: 0; }
+            100% { transform: translateY(0) scale(1); opacity: 1; }
+        }
+        .chat-bubble-animate {
+            animation: popIn 0.4s ease-out forwards;
+        }
+        @keyframes shimmer {
+            100% { transform: skewX(-12deg) translateX(100%); }
+        }
+        .shimmer-effect::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: translateX(-100%);
+        }
+        .shimmer-effect:hover::after {
+            animation: shimmer 1.5s infinite;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen relative flex flex-col justify-between selection:bg-pink-300 overflow-hidden">
+
+    <!-- Dekorasi Latar Belakang -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute -top-10 -left-10 w-64 h-64 bg-pink-300 rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute top-1/4 -right-20 w-80 h-80 bg-rose-300 rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute -bottom-20 left-1/3 w-96 h-96 bg-red-200 rounded-full blur-3xl opacity-60"></div>
+        <div id="heart-container" class="absolute inset-0"></div>
+    </div>
+    <div class="absolute inset-0 w-full h-full overflow-hidden z-0">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+            <source src="video-bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="absolute inset-0 bg-white/30 backdrop-blur-md"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="relative z-10 w-full px-4 pt-4 md:pt-6 text-center">
+        <!-- Live Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/90 backdrop-blur-md border border-pink-200 rounded-full shadow-md mb-2 animate-bounce">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+            <p class="text-[9px] md:text-[10px] font-black text-pink-600 tracking-widest uppercase">Hot Group: 4 Gorgeous Girls Online</p>
+        </div>
+        
+        <!-- Judul Utama -->
+        <h1 class="font-serif text-2xl md:text-4xl text-gray-900 font-extrabold tracking-tight leading-none filter drop-shadow-sm">
+            Find Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 font-black relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-pink-400">Dream Girl</span> Tonight
+        </h1>
+        
+        <!-- Kalimat tag -->
+        <p class="text-[10px] md:text-sm text-rose-600 font-semibold mt-1.5 tracking-wide italic max-w-lg mx-auto">
+            "They are lonely, excited, and waiting to show you everything on a private camera. Will you make them wait? 🤫"
+        </p>
+    </header>
+
+    <!-- Kontainer Konten Utama -->
+    <main class="relative z-10 flex-grow w-full max-w-5xl mx-auto px-4 py-2 flex flex-col md:flex-row gap-4 items-center justify-center overflow-hidden">
+        
+        <!-- KOLOM KIRI: Frame Foto Wanita Cantik Interaktif -->
+        <div class="w-[180px] h-[270px] md:w-[320px] md:h-[480px] bg-white/90 backdrop-blur-xl rounded-2xl p-2 shadow-2xl border border-white/60 relative overflow-hidden flex flex-col flex-shrink-0 transition-all duration-300 hover:shadow-pink-300/40 hover:shadow-2xl">
+            <!-- Indikator Slide Foto -->
+            <div class="absolute top-4 left-4 z-20 flex gap-1" id="slide-indicators"></div>
+
+            <!-- Kontainer Foto -->
+            <div class="relative flex-grow rounded-xl overflow-hidden shadow-md h-full">
+                <div id="image-slider-container" class="h-full w-full relative bg-gray-100">
+                    <!-- Foto dinamis disuntikkan di sini -->
+                </div>
+
+                <!-- Efek gradien gelap di bawah foto -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none z-10"></div>
+
+                <!-- Biodata / Informasi Jarak -->
+                <div class="absolute bottom-3 left-3 right-3 z-20 text-white">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <h2 id="profile-name" class="text-xs md:text-lg font-extrabold tracking-tight">Name, Age</h2>
+                        <span class="bg-red-500 text-[7px] md:text-[8px] text-white font-extrabold px-1.5 py-0.5 rounded-full uppercase flex items-center gap-1">
+                            <i class="fa-solid fa-fire text-[8px] animate-pulse"></i> Active Now
+                        </span>
+                    </div>
+                    <div class="flex items-center gap-1 text-[8px] md:text-[9px] text-gray-300 mt-0.5">
+                        <i class="fa-solid fa-location-dot text-pink-500"></i>
+                        <span id="profile-distance">Just 1.2 miles away</span>
+                    </div>
+                </div>
+
+                <!-- Tombol Navigasi Slider Manual -->
+                <button onclick="prevProfile()" class="absolute left-1.5 top-1/2 -translate-y-1/2 z-20 w-6 h-6 md:w-8 md:h-8 bg-black/45 backdrop-blur-md rounded-full text-white hover:bg-pink-500 transition duration-300 flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-left text-[9px] md:text-xs"></i>
+                </button>
+                <button onclick="nextProfile()" class="absolute right-1.5 top-1/2 -translate-y-1/2 z-20 w-6 h-6 md:w-8 md:h-8 bg-black/45 backdrop-blur-md rounded-full text-white hover:bg-pink-500 transition duration-300 flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-right text-[9px] md:text-xs"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- KOLOM KANAN: Ruang Obrolan Grup & Tombol CTA -->
+        <div class="w-full md:w-[50%] flex flex-col h-[250px] md:h-[480px] justify-between">
+            
+            <!-- Simulasi Obrolan Grup VIP Live -->
+            <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 shadow-2xl border border-pink-100 flex-grow flex flex-col overflow-hidden max-h-[120px] md:max-h-[310px] relative mb-3">
+                <!-- Header Grup -->
+                <div class="flex items-center justify-between pb-2 border-b border-pink-100 mb-2">
+                    <div class="flex items-center gap-2">
+                        <div class="flex -space-x-2">
+                            <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-300 overflow-hidden"><img src="https://picsum.photos/seed/girl1/48/48.jpg" class="object-cover w-full h-full"></span>
+                            <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-300 overflow-hidden"><img src="https://picsum.photos/seed/girl2/48/48.jpg" class="object-cover w-full h-full"></span>
+                            <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-300 overflow-hidden"><img src="https://picsum.photos/seed/girl3/48/48.jpg" class="object-cover w-full h-full"></span>
+                        </div>
+                        <div>
+                            <p class="text-xs font-black text-gray-800 leading-none">VIP Room: American Babes 🔞</p>
+                            <p class="text-[9px] text-green-500 font-semibold mt-0.5">Whispering about you...</p>
+                        </div>
+                    </div>
+                    <span class="text-[9px] font-bold text-pink-500 bg-pink-50 px-2 py-0.5 rounded-full uppercase tracking-wider">Live Chat</span>
+                </div>
+
+                <!-- Wadah Pesan Chat -->
+                <div id="group-chat-box" class="flex-grow overflow-y-auto space-y-2 pr-1 flex flex-col text-[11px] md:text-xs scroll-smooth">
+                    <!-- Obrolan dinamis disuntikkan di sini -->
+                </div>
+            </div>
+
+            <!-- Bagian Tombol Aksi Tunggal & Countdown -->
+            <div class="flex flex-col gap-2">
+                
+                <!-- Countdown Auto-Redirect Banner -->
+                <div class="bg-gradient-to-r from-pink-500/10 to-red-500/10 border border-pink-200/50 rounded-xl py-1.5 px-3 flex items-center justify-between shadow-sm">
+                    <span class="text-[9px] md:text-[10px] font-black text-rose-600 uppercase tracking-wider flex items-center gap-1.5">
+                        <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-ping"></span>
+                        System Matching Connected
+                    </span>
+                    <span id="countdown-banner" class="text-[9px] md:text-[11px] font-bold text-gray-700">
+                        Entering private room in <span id="redirect-timer" class="text-red-600 font-black text-sm">10</span>s...
+                    </span>
+                </div>
+
+                <!-- Tombol Tunggal: Enter App -->
+                <button id="btn-enter" class="pulse-btn-live group relative flex items-center justify-center gap-3 bg-gradient-to-r from-rose-600 to-red-500 text-white font-black py-3 px-4 rounded-xl shadow-lg transition-all duration-300 overflow-hidden text-center shimmer-effect cursor-pointer">
+                    <div class="relative w-5 h-5 flex items-center justify-center">
+                        <span class="absolute w-2.5 h-2.5 rounded-full bg-red-300 animate-ping"></span>
+                        <svg class="w-5 h-5 fill-current relative z-10" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+                        </svg>
+                    </div>
+                    <div class="leading-tight text-left">
+                        <span class="block text-[8px] text-red-100 font-bold uppercase tracking-wider">Join Live Video Stream Now</span>
+                        <span class="text-xs md:text-sm tracking-tight font-extrabold">ENTER APP</span>
+                    </div>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 py-2 text-center text-[8px] text-gray-500">
+        <p class="font-bold text-rose-600 flex items-center justify-center gap-1 animate-pulse uppercase tracking-wider">
+            <i class="fa-solid fa-shield-halved"></i> 100% Secure & Anonymous Connection • Adults 18+ Only
+        </p>
+        <p class="text-gray-400 mt-0.5">&copy; 2026 HotCrush USA. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal Simulasi Sambungan Kamera -->
+    <div id="camera-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-3xl p-6 max-w-sm w-11/12 mx-auto text-center border-2 border-pink-200 shadow-2xl transform scale-95 transition-all duration-300">
+            <div class="relative w-20 h-20 mx-auto mb-4">
+                <div class="absolute inset-0 rounded-full border-4 border-pink-100 border-t-pink-500 animate-spin"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <i class="fa-solid fa-video text-pink-500 text-2xl animate-pulse"></i>
+                </div>
+            </div>
+            <h3 class="text-lg font-black text-gray-900">Connecting Private Stream...</h3>
+            <p class="text-xs text-gray-500 mt-2 leading-relaxed">Securing your anonymous peer-to-peer video channel. Please wait while we link your camera with the VIP room!</p>
+            <div class="mt-4 bg-gray-50 p-3 rounded-xl border border-gray-100 flex items-center gap-2 justify-center">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
+                <span class="text-[10px] font-bold text-gray-600 uppercase tracking-wider">Status: Syncing WebCam Feed</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifikasi Toast -->
+    <div id="custom-toast" class="fixed top-3 left-1/2 -translate-x-1/2 z-50 transform translate-y-[-100px] opacity-0 transition-all duration-500 bg-white/95 backdrop-blur-md border border-pink-200 px-4 py-2 rounded-full shadow-2xl flex items-center gap-2">
+        <span class="w-5 h-5 rounded-full bg-pink-100 text-pink-500 flex items-center justify-center text-xs">
+            <i class="fa-solid fa-heart animate-ping"></i>
+        </span>
+        <div class="text-left">
+            <p id="toast-title" class="font-black text-gray-800 text-[10px]">Title</p>
+            <p id="toast-desc" class="text-[9px] text-gray-500">Subtitle</p>
+        </div>
+    </div>
+
+    <script>
+        /*======================================================================
+         KONFIGURASI — Ganti liveStreamUrl dengan link tujuan Anda
+        ======================================================================*/
+        const CONFIG = {
+            liveStreamUrl: "https://convsweeps.com/p/699c29d581165e28830109e8/6a34be70b7d5943f3a0e6151?sid=SUROTO&sid2=SUROTO&sid3=SUROTO"
+        };
+
+        // Ganti data profil di bawah ini sesuai kebutuhan
+        const PROFILES = [
+            {
+                name: "Emily Watson",
+                age: 22,
+                image: "https://picsum.photos/seed/emily22/640/960.jpg",
+                distance: "Just 1.2 miles away from you"
+            },
+            {
+                name: "Ashley Davis",
+                age: 24,
+                image: "https://picsum.photos/seed/ashley24/640/960.jpg",
+                distance: "Just 0.8 miles away from you"
+            },
+            {
+                name: "Brianna Taylor",
+                age: 23,
+                image: "https://picsum.photos/seed/brianna23/640/960.jpg",
+                distance: "Just 2.5 miles away from you"
+            },
+            {
+                name: "Madison Snyder",
+                age: 21,
+                image: "https://picsum.photos/seed/madison21/640/960.jpg",
+                distance: "Just 1.9 miles away from you"
+            }
+        ];
+
+        // Ganti pesan chat sesuai kebutuhan
+        const GROUP_CONVERSATIONS = [
+            { sender: "Emily Watson", img: "https://picsum.photos/seed/girl1/48/48.jpg", message: "Hey gorgeous... Why are you just looking at our photos? Come say hi to me 😘" },
+            { sender: "Ashley Davis", img: "https://picsum.photos/seed/girl2/48/48.jpg", message: "Exactly honey! Join our private room. The four of us are so lonely tonight... 🙈" },
+            { sender: "Brianna Taylor", img: "https://picsum.photos/seed/girl3/48/48.jpg", message: "I just got out of the shower... I really want to video call but nobody's online yet 😭" },
+            { sender: "Madison Snyder", img: "https://picsum.photos/seed/girl4/48/48.jpg", message: "Do you want to keep Brianna warm? Hurry up and click the buttons below to connect! 🔥" },
+            { sender: "Emily Watson", img: "https://picsum.photos/seed/girl1/48/48.jpg", message: "Honestly, whoever clicks first gets a very special photo from me right now! 💋" },
+            { sender: "Ashley Davis", img: "https://picsum.photos/seed/girl2/48/48.jpg", message: "Don't make us wait sweetie... Join before we close this private room! 🖤💄" }
+        ];
+
+        let currentProfileIndex = 0;
+        let slideInterval;
+        let chatMessageIndex = 0;
+        let countdownSeconds = 10;
+        let countdownTimerId = null;
+        let isRedirecting = false;
+
+        window.onload = function() {
+            setupActionUrls();
+            renderProfileSlides();
+            updateProfileUI();
+            startAutoSlider();
+            startGroupChatSimulation();
+            startAutoRedirectCountdown();
+            setInterval(spawnHeartParticle, 1500);
+
+            document.body.addEventListener('click', function(e) {
+                if (!e.target.closest('button') && !e.target.closest('a')) {
+                    spawnLipsAtPosition(e.clientX, e.clientY);
+                }
+            });
+
+            setTimeout(function() {
+                showToastNotification("Emily Watson sent a photo!", "Click 'ENTER APP' to open and view the snap 💋");
+            }, 5000);
+        };
+
+        function startAutoRedirectCountdown() {
+            var timerSpan = document.getElementById('redirect-timer');
+            countdownTimerId = setInterval(function() {
+                countdownSeconds--;
+                if (timerSpan) {
+                    timerSpan.textContent = countdownSeconds;
+                }
+                if (countdownSeconds <= 0) {
+                    clearInterval(countdownTimerId);
+                    triggerAppRedirect();
+                }
+            }, 1000);
+        }
+
+        function triggerAppRedirect() {
+            if (isRedirecting) return;
+            isRedirecting = true;
+            if (countdownTimerId) {
+                clearInterval(countdownTimerId);
+            }
+            var camModal = document.getElementById('camera-modal');
+            if (camModal) {
+                camModal.classList.remove('hidden');
+            }
+            setTimeout(function() {
+                window.location.href = CONFIG.liveStreamUrl;
+            }, 1800);
+        }
+
+        function setupActionUrls() {
+            var enterBtn = document.getElementById('btn-enter');
+            if (enterBtn) {
+                enterBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    triggerAppRedirect();
+                });
+            }
+        }
+
+        function renderProfileSlides() {
+            var container = document.getElementById('image-slider-container');
+            var indicators = document.getElementById('slide-indicators');
+            container.innerHTML = '';
+            indicators.innerHTML = '';
+
+            PROFILES.forEach(function(profile, index) {
+                var img = document.createElement('img');
+                img.src = profile.image;
+                img.alt = profile.name;
+                img.id = 'slide-' + index;
+                img.className = 'absolute inset-0 w-full h-full object-cover slide-transition ' + (index === 0 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 z-0');
+                img.onerror = function() {
+                    this.src = 'https://placehold.co/600x800/ffd1d1/c9184a?text=' + encodeURIComponent(profile.name);
+                };
+                container.appendChild(img);
+
+                var dot = document.createElement('div');
+                dot.id = 'indicator-' + index;
+                dot.className = 'h-1 rounded-full transition-all duration-300 ' + (index === 0 ? 'w-6 bg-pink-500' : 'w-2 bg-white/50');
+                indicators.appendChild(dot);
+            });
+        }
+
+        function updateProfileUI() {
+            var profile = PROFILES[currentProfileIndex];
+
+            PROFILES.forEach(function(_, index) {
+                var img = document.getElementById('slide-' + index);
+                var dot = document.getElementById('indicator-' + index);
+                if (img && dot) {
+                    if (index === currentProfileIndex) {
+                        if (img.classList.contains('opacity-0')) img.classList.replace('opacity-0', 'opacity-100');
+                        if (img.classList.contains('scale-95')) img.classList.replace('scale-95', 'scale-100');
+                        img.style.zIndex = '10';
+                        if (dot.classList.contains('w-2')) dot.classList.replace('w-2', 'w-6');
+                        if (dot.classList.contains('bg-white/50')) dot.classList.replace('bg-white/50', 'bg-pink-500');
+                    } else {
+                        if (img.classList.contains('opacity-100')) img.classList.replace('opacity-100', 'opacity-0');
+                        if (img.classList.contains('scale-100')) img.classList.replace('scale-100', 'scale-95');
+                        img.style.zIndex = '0';
+                        if (dot.classList.contains('w-6')) dot.classList.replace('w-6', 'w-2');
+                        if (dot.classList.contains('bg-pink-500')) dot.classList.replace('bg-pink-500', 'bg-white/50');
+                    }
+                }
+            });
+
+            document.getElementById('profile-name').textContent = profile.name + ', ' + profile.age;
+            document.getElementById('profile-distance').textContent = profile.distance;
+        }
+
+        function nextProfile() {
+            clearInterval(slideInterval);
+            currentProfileIndex = (currentProfileIndex + 1) % PROFILES.length;
+            updateProfileUI();
+            startAutoSlider();
+        }
+
+        function prevProfile() {
+            clearInterval(slideInterval);
+            currentProfileIndex = (currentProfileIndex - 1 + PROFILES.length) % PROFILES.length;
+            updateProfileUI();
+            startAutoSlider();
+        }
+
+        function startAutoSlider() {
+            slideInterval = setInterval(function() {
+                currentProfileIndex = (currentProfileIndex + 1) % PROFILES.length;
+                updateProfileUI();
+            }, 5000);
+        }
+
+        function startGroupChatSimulation() {
+            var chatBox = document.getElementById('group-chat-box');
+
+            function addNewMessage() {
+                if (chatMessageIndex >= GROUP_CONVERSATIONS.length) {
+                    chatBox.innerHTML = '';
+                    chatMessageIndex = 0;
+                }
+
+                var data = GROUP_CONVERSATIONS[chatMessageIndex];
+                var bubbleWrapper = document.createElement('div');
+                bubbleWrapper.className = 'flex gap-2 items-start chat-bubble-animate max-w-[90%]';
+
+                bubbleWrapper.innerHTML =
+                    '<img src="' + data.img + '" alt="' + data.sender + '" class="w-8 h-8 rounded-full object-cover border border-pink-300 flex-shrink-0">' +
+                    '<div class="bg-pink-50 text-gray-800 p-2.5 rounded-2xl rounded-tl-none shadow-sm border border-pink-100">' +
+                        '<p class="font-extrabold text-[10px] text-pink-600 leading-none mb-1">' + data.sender + '</p>' +
+                        '<p class="leading-snug">' + data.message + '</p>' +
+                    '</div>';
+
+                chatBox.appendChild(bubbleWrapper);
+                chatBox.scrollTop = chatBox.scrollHeight;
+                chatMessageIndex++;
+
+                var nextDelay = 3000 + Math.random() * 2500;
+                setTimeout(addNewMessage, nextDelay);
+            }
+
+            setTimeout(addNewMessage, 1000);
+        }
+
+        function showToastNotification(title, description) {
+            var toast = document.getElementById('custom-toast');
+            document.getElementById('toast-title').textContent = title;
+            document.getElementById('toast-desc').textContent = description;
+            toast.classList.remove('translate-y-[-100px]', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(function() {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-[-100px]', 'opacity-0');
+            }, 4000);
+        }
+
+        function spawnHeartParticle() {
+            var container = document.getElementById('heart-container');
+            var heart = document.createElement('div');
+            heart.innerHTML = Math.random() > 0.5 ? '❤️' : '💖';
+            heart.className = 'heart-particle text-pink-400/40 text-sm';
+            var startX = Math.random() * 100;
+            var duration = 3 + Math.random() * 3;
+            var size = 12 + Math.random() * 16;
+            heart.style.left = startX + 'vw';
+            heart.style.animationDuration = duration + 's';
+            heart.style.fontSize = size + 'px';
+            container.appendChild(heart);
+            setTimeout(function() { heart.remove(); }, duration * 1000);
+        }
+
+        function spawnLipsAtPosition(x, y) {
+            var container = document.getElementById('heart-container');
+            var lips = document.createElement('div');
+            lips.innerHTML = '💋';
+            lips.className = 'absolute text-red-500/90 pointer-events-none transition-all duration-1000 ease-out z-50';
+            lips.style.left = (x - 10) + 'px';
+            lips.style.top = (y - 10) + 'px';
+            lips.style.fontSize = (18 + Math.random() * 12) + 'px';
+            container.appendChild(lips);
+            setTimeout(function() {
+                lips.style.transform = 'translate(' + ((Math.random() - 0.5) * 150) + 'px, -150px) scale(0)';
+                lips.style.opacity = '0';
+            }, 40);
+            setTimeout(function() { lips.remove(); }, 1050);
+        }
+    </script>
+</body>
+</html>
