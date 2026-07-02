@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIP Room - Meet Hot American Girls 💋</title>
+    <title>VIP Room — Connect with New Friends</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css">
-    <meta property="og:title" content="VIP ROOM – Meet Singles Around the World">
-    <meta property="og:description" content="An inclusive space for deep conversations, new friendships, or meaningful relationships.">
+    <meta property="og:title" content="VIP ROOM — Meet New People Nearby">
+    <meta property="og:description" content="A friendly space for conversations, new friendships, and meaningful connections with people near you.">
     <meta property="og:image" content="https://b-cdn.grbto.net/6a2fae84d66dc-1781509764.png?auto=format&fit=crop&w=1200&h=630&q=80">
     <link rel="icon" type="image/png" href="https://b-cdn.grbto.net/6a2563fa7e139-1780835322.png?auto=format&fit=crop&w=32&h=32&q=80">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -53,8 +53,8 @@
                 transform: translateY(100vh) scale(0) rotate(0deg);
                 opacity: 0;
             }
-            10% { opacity: 0.8; }
-            90% { opacity: 0.8; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
             100% {
                 transform: translateY(-10vh) scale(1.3) rotate(360deg);
                 opacity: 0;
@@ -77,80 +77,57 @@
         .chat-bubble-animate {
             animation: popIn 0.4s ease-out forwards;
         }
-        @keyframes shimmer {
-            100% { transform: skewX(-12deg) translateX(100%); }
-        }
-        .shimmer-effect::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transform: translateX(-100%);
-        }
-        .shimmer-effect:hover::after {
-            animation: shimmer 1.5s infinite;
-        }
+        .scrollbar-thin::-webkit-scrollbar { width: 3px; }
+        .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+        .scrollbar-thin::-webkit-scrollbar-thumb { background: #f9a8d4; border-radius: 10px; }
     </style>
 </head>
 <body class="h-screen w-screen relative flex flex-col justify-between selection:bg-pink-300 overflow-hidden">
 
-    <!-- Dekorasi Latar Belakang -->
     <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <div class="absolute -top-10 -left-10 w-64 h-64 bg-pink-300 rounded-full blur-3xl opacity-50"></div>
-        <div class="absolute top-1/4 -right-20 w-80 h-80 bg-rose-300 rounded-full blur-3xl opacity-50"></div>
-        <div class="absolute -bottom-20 left-1/3 w-96 h-96 bg-red-200 rounded-full blur-3xl opacity-60"></div>
+        <div class="absolute -top-10 -left-10 w-64 h-64 bg-pink-300 rounded-full blur-3xl opacity-40"></div>
+        <div class="absolute top-1/4 -right-20 w-80 h-80 bg-rose-300 rounded-full blur-3xl opacity-40"></div>
+        <div class="absolute -bottom-20 left-1/3 w-96 h-96 bg-red-200 rounded-full blur-3xl opacity-50"></div>
         <div id="heart-container" class="absolute inset-0"></div>
     </div>
     <div class="absolute inset-0 w-full h-full overflow-hidden z-0">
         <video autoplay muted loop playsinline class="w-full h-full object-cover">
             <source src="video-bg.mp4" type="video/mp4">
-            Your browser does not support the video tag.
         </video>
         <div class="absolute inset-0 bg-white/30 backdrop-blur-md"></div>
     </div>
 
-    <!-- Header -->
     <header class="relative z-10 w-full px-4 pt-4 md:pt-6 text-center">
-        <!-- Live Badge -->
-        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/90 backdrop-blur-md border border-pink-200 rounded-full shadow-md mb-2 animate-bounce">
-            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
-            <p class="text-[9px] md:text-[10px] font-black text-pink-600 tracking-widest uppercase">Hot Group: 4 Gorgeous Girls Online</p>
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/90 backdrop-blur-md border border-pink-200 rounded-full shadow-md mb-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+            <p class="text-[9px] md:text-[10px] font-black text-pink-600 tracking-widest uppercase">Group Active: 4 Friends Online Now</p>
         </div>
         
-        <!-- Judul Utama -->
         <h1 class="font-serif text-2xl md:text-4xl text-gray-900 font-extrabold tracking-tight leading-none filter drop-shadow-sm">
-            Find Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 font-black relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-pink-400">Dream Girl</span> Tonight
+            Meet Amazing People <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 font-black relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-pink-400">Near You</span> Tonight
         </h1>
         
-        <!-- Kalimat tag -->
         <p class="text-[10px] md:text-sm text-rose-600 font-semibold mt-1.5 tracking-wide italic max-w-lg mx-auto">
-            "They are lonely, excited, and waiting to show you everything on a private camera. Will you make them wait? 🤫"
+            "They're friendly, excited to chat, and waiting to connect on a live video call. Don't keep them waiting!"
         </p>
     </header>
 
-    <!-- Kontainer Konten Utama -->
     <main class="relative z-10 flex-grow w-full max-w-5xl mx-auto px-4 py-2 flex flex-col md:flex-row gap-4 items-center justify-center overflow-hidden">
         
-        <!-- KOLOM KIRI: Frame Foto Wanita Cantik Interaktif -->
         <div class="w-[180px] h-[270px] md:w-[320px] md:h-[480px] bg-white/90 backdrop-blur-xl rounded-2xl p-2 shadow-2xl border border-white/60 relative overflow-hidden flex flex-col flex-shrink-0 transition-all duration-300 hover:shadow-pink-300/40 hover:shadow-2xl">
-            <!-- Indikator Slide Foto -->
             <div class="absolute top-4 left-4 z-20 flex gap-1" id="slide-indicators"></div>
 
-            <!-- Kontainer Foto -->
             <div class="relative flex-grow rounded-xl overflow-hidden shadow-md h-full">
                 <div id="image-slider-container" class="h-full w-full relative bg-gray-100">
-                    <!-- Foto dinamis disuntikkan di sini -->
                 </div>
 
-                <!-- Efek gradien gelap di bawah foto -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none z-10"></div>
 
-                <!-- Biodata / Informasi Jarak -->
                 <div class="absolute bottom-3 left-3 right-3 z-20 text-white">
                     <div class="flex items-center gap-2 flex-wrap">
                         <h2 id="profile-name" class="text-xs md:text-lg font-extrabold tracking-tight">Name, Age</h2>
-                        <span class="bg-red-500 text-[7px] md:text-[8px] text-white font-extrabold px-1.5 py-0.5 rounded-full uppercase flex items-center gap-1">
-                            <i class="fa-solid fa-fire text-[8px] animate-pulse"></i> Active Now
+                        <span class="bg-green-500 text-[7px] md:text-[8px] text-white font-extrabold px-1.5 py-0.5 rounded-full uppercase flex items-center gap-1">
+                            <i class="fa-solid fa-circle text-[5px] animate-pulse"></i> Online
                         </span>
                     </div>
                     <div class="flex items-center gap-1 text-[8px] md:text-[9px] text-gray-300 mt-0.5">
@@ -159,7 +136,6 @@
                     </div>
                 </div>
 
-                <!-- Tombol Navigasi Slider Manual -->
                 <button onclick="prevProfile()" class="absolute left-1.5 top-1/2 -translate-y-1/2 z-20 w-6 h-6 md:w-8 md:h-8 bg-black/45 backdrop-blur-md rounded-full text-white hover:bg-pink-500 transition duration-300 flex items-center justify-center">
                     <i class="fa-solid fa-chevron-left text-[9px] md:text-xs"></i>
                 </button>
@@ -169,12 +145,9 @@
             </div>
         </div>
 
-        <!-- KOLOM KANAN: Ruang Obrolan Grup & Tombol CTA -->
         <div class="w-full md:w-[50%] flex flex-col h-[250px] md:h-[480px] justify-between">
             
-            <!-- Simulasi Obrolan Grup VIP Live -->
             <div class="bg-white/95 backdrop-blur-md rounded-2xl p-3 shadow-2xl border border-pink-100 flex-grow flex flex-col overflow-hidden max-h-[120px] md:max-h-[310px] relative mb-3">
-                <!-- Header Grup -->
                 <div class="flex items-center justify-between pb-2 border-b border-pink-100 mb-2">
                     <div class="flex items-center gap-2">
                         <div class="flex -space-x-2">
@@ -183,35 +156,30 @@
                             <span class="w-6 h-6 rounded-full border-2 border-white bg-gray-300 overflow-hidden"><img src="https://b-cdn.grbto.net/6a2f55eabe278-1781487082.jpg" class="object-cover w-full h-full"></span>
                         </div>
                         <div>
-                            <p class="text-xs font-black text-gray-800 leading-none">VIP Room: American Babes 🔞</p>
-                            <p class="text-[9px] text-green-500 font-semibold mt-0.5">Whispering about you...</p>
+                            <p class="text-xs font-black text-gray-800 leading-none">VIP Room: Local Friends</p>
+                            <p class="text-[9px] text-green-500 font-semibold mt-0.5">Chatting right now...</p>
                         </div>
                     </div>
-                    <span class="text-[9px] font-bold text-pink-500 bg-pink-50 px-2 py-0.5 rounded-full uppercase tracking-wider">Live Chat</span>
+                    <span class="text-[9px] font-bold text-pink-500 bg-pink-50 px-2 py-0.5 rounded-full uppercase tracking-wider">Live</span>
                 </div>
 
-                <!-- Wadah Pesan Chat -->
-                <div id="group-chat-box" class="flex-grow overflow-y-auto space-y-2 pr-1 flex flex-col text-[11px] md:text-xs scroll-smooth">
-                    <!-- Obrolan dinamis disuntikkan di sini -->
+                <div id="group-chat-box" class="flex-grow overflow-y-auto space-y-2 pr-1 flex flex-col text-[11px] md:text-xs scroll-smooth scrollbar-thin">
                 </div>
             </div>
 
-            <!-- Bagian Tombol Aksi Tunggal & Countdown -->
             <div class="flex flex-col gap-2">
                 
-                <!-- Countdown Auto-Redirect Banner -->
                 <div class="bg-gradient-to-r from-pink-500/10 to-red-500/10 border border-pink-200/50 rounded-xl py-1.5 px-3 flex items-center justify-between shadow-sm">
                     <span class="text-[9px] md:text-[10px] font-black text-rose-600 uppercase tracking-wider flex items-center gap-1.5">
-                        <span class="w-1.5 h-1.5 rounded-full bg-red-600 animate-ping"></span>
-                        System Matching Connected
+                        <span class="w-1.5 h-1.5 rounded-full bg-green-600 animate-pulse"></span>
+                        System Ready
                     </span>
                     <span id="countdown-banner" class="text-[9px] md:text-[11px] font-bold text-gray-700">
-                        Entering private room in <span id="redirect-timer" class="text-red-600 font-black text-sm">10</span>s...
+                        Joining room in <span id="redirect-timer" class="text-red-600 font-black text-sm">10</span>s...
                     </span>
                 </div>
 
-                <!-- Tombol Tunggal: Enter App -->
-                <button id="btn-enter" class="pulse-btn-live group relative flex items-center justify-center gap-3 bg-gradient-to-r from-rose-600 to-red-500 text-white font-black py-3 px-4 rounded-xl shadow-lg transition-all duration-300 overflow-hidden text-center shimmer-effect cursor-pointer">
+                <button id="btn-enter" class="pulse-btn-live group relative flex items-center justify-center gap-3 bg-gradient-to-r from-rose-600 to-red-500 text-white font-black py-3 px-4 rounded-xl shadow-lg transition-all duration-300 overflow-hidden text-center cursor-pointer">
                     <div class="relative w-5 h-5 flex items-center justify-center">
                         <span class="absolute w-2.5 h-2.5 rounded-full bg-red-300 animate-ping"></span>
                         <svg class="w-5 h-5 fill-current relative z-10" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -219,8 +187,8 @@
                         </svg>
                     </div>
                     <div class="leading-tight text-left">
-                        <span class="block text-[8px] text-red-100 font-bold uppercase tracking-wider">Join Live Video Stream Now</span>
-                        <span class="text-xs md:text-sm tracking-tight font-extrabold">ENTER APP</span>
+                        <span class="block text-[8px] text-red-100 font-bold uppercase tracking-wider">Join Live Video Chat</span>
+                        <span class="text-xs md:text-sm tracking-tight font-extrabold">OPEN STREAM</span>
                     </div>
                 </button>
             </div>
@@ -228,15 +196,13 @@
         </div>
     </main>
 
-    <!-- Footer -->
     <footer class="relative z-10 py-2 text-center text-[8px] text-gray-500">
-        <p class="font-bold text-rose-600 flex items-center justify-center gap-1 animate-pulse uppercase tracking-wider">
-            <i class="fa-solid fa-shield-halved"></i> 100% Secure & Anonymous Connection • Adults 18+ Only
+        <p class="font-bold text-rose-600 flex items-center justify-center gap-1 uppercase tracking-wider">
+            <i class="fa-solid fa-shield-halved"></i> Secure & Private Connection — Community Guidelines Apply
         </p>
-        <p class="text-gray-400 mt-0.5">&copy; 2026 HotCrush USA. All Rights Reserved.</p>
+        <p class="text-gray-400 mt-0.5">&copy; 2026 VIP Connect USA. All Rights Reserved.</p>
     </footer>
 
-    <!-- Modal Simulasi Sambungan Kamera -->
     <div id="camera-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center hidden">
         <div class="bg-white rounded-3xl p-6 max-w-sm w-11/12 mx-auto text-center border-2 border-pink-200 shadow-2xl transform scale-95 transition-all duration-300">
             <div class="relative w-20 h-20 mx-auto mb-4">
@@ -245,19 +211,18 @@
                     <i class="fa-solid fa-video text-pink-500 text-2xl animate-pulse"></i>
                 </div>
             </div>
-            <h3 class="text-lg font-black text-gray-900">Connecting Private Stream...</h3>
-            <p class="text-xs text-gray-500 mt-2 leading-relaxed">Securing your anonymous peer-to-peer video channel. Please wait while we link your camera with the VIP room!</p>
+            <h3 class="text-lg font-black text-gray-900">Connecting to Room...</h3>
+            <p class="text-xs text-gray-500 mt-2 leading-relaxed">Setting up your private video channel. Please wait while we connect you to the group!</p>
             <div class="mt-4 bg-gray-50 p-3 rounded-xl border border-gray-100 flex items-center gap-2 justify-center">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping"></span>
-                <span class="text-[10px] font-bold text-gray-600 uppercase tracking-wider">Status: Syncing WebCam Feed</span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+                <span class="text-[10px] font-bold text-gray-600 uppercase tracking-wider">Status: Establishing Connection</span>
             </div>
         </div>
     </div>
 
-    <!-- Notifikasi Toast -->
     <div id="custom-toast" class="fixed top-3 left-1/2 -translate-x-1/2 z-50 transform translate-y-[-100px] opacity-0 transition-all duration-500 bg-white/95 backdrop-blur-md border border-pink-200 px-4 py-2 rounded-full shadow-2xl flex items-center gap-2">
         <span class="w-5 h-5 rounded-full bg-pink-100 text-pink-500 flex items-center justify-center text-xs">
-            <i class="fa-solid fa-heart animate-ping"></i>
+            <i class="fa-solid fa-bell"></i>
         </span>
         <div class="text-left">
             <p id="toast-title" class="font-black text-gray-800 text-[10px]">Title</p>
@@ -270,10 +235,9 @@
          KONFIGURASI — Ganti liveStreamUrl dengan link tujuan Anda
         ======================================================================*/
         const CONFIG = {
-            liveStreamUrl: "https://convsweeps.com/p/699c29d581165e28830109e8/6a34be70b7d5943f3a0e6151?sid=SUROTO&sid2=SUROTO&sid3=SUROTO"
+            liveStreamUrl: "https://rPjtssD.richards32.xyz/WQTwzxEZRaPIXHzd7kCP"
         };
 
-        // Ganti data profil di bawah ini sesuai kebutuhan
         const PROFILES = [
             {
                 name: "Emily Watson",
@@ -301,20 +265,19 @@
             }
         ];
 
-        // Ganti pesan chat sesuai kebutuhan
         const GROUP_CONVERSATIONS = [
-            { sender: "Emily Watson", img: "https://b-cdn.grbto.net/6a2f55c11707f-1781487041.jpg", message: "Hey gorgeous... Why are you just looking at our photos? Come say hi to me 😘" },
-            { sender: "Ashley Davis", img: "https://b-cdn.grbto.net/6a2f55e16085e-1781487073.jpg", message: "Exactly honey! Join our private room. The four of us are so lonely tonight... 🙈" },
-            { sender: "Brianna Taylor", img: "https://b-cdn.grbto.net/6a2f55eabe278-1781487082.jpg", message: "I just got out of the shower... I really want to video call but nobody's online yet 😭" },
-            { sender: "Madison Snyder", img: "https://b-cdn.grbto.net/6a2f55feb091b-1781487102.jpg", message: "Do you want to keep Brianna warm? Hurry up and click the buttons below to connect! 🔥" },
-            { sender: "Emily Watson", img: "https://b-cdn.grbto.net/6a2f55c11707f-1781487041.jpg", message: "Honestly, whoever clicks first gets a very special photo from me right now! 💋" },
-            { sender: "Ashley Davis", img: "https://b-cdn.grbto.net/6a2f55e16085e-1781487073.jpg", message: "Don't make us wait sweetie... Join before we close this private room! 🖤💄" }
+            { sender: "Emily Watson", img: "https://b-cdn.grbto.net/6a2f55c11707f-1781487041.jpg", message: "Hey! Why are you just looking at our photos? Come say hi to us :)" },
+            { sender: "Ashley Davis", img: "https://b-cdn.grbto.net/6a2f55e16085e-1781487073.jpg", message: "Right?! Join our room! The four of us are just hanging out and it'd be fun to have more people here" },
+            { sender: "Brianna Taylor", img: "https://b-cdn.grbto.net/6a2f55eabe278-1781487082.jpg", message: "I just got home and freshened up... Really want to do a group video call but it's quiet in here lol" },
+            { sender: "Madison Snyder", img: "https://b-cdn.grbto.net/6a2f55feb091b-1781487102.jpg", message: "Someone join please! Click the button below to hop in the call with us!" },
+            { sender: "Emily Watson", img: "https://b-cdn.grbto.net/6a2f55c11707f-1781487041.jpg", message: "Honestly whoever joins first gets to pick what we talk about haha" },
+            { sender: "Ashley Davis", img: "https://b-cdn.grbto.net/6a2f55e16085e-1781487073.jpg", message: "Don't make us wait too long... The room might fill up and we can only take a few more people!" }
         ];
 
         let currentProfileIndex = 0;
         let slideInterval;
         let chatMessageIndex = 0;
-        let countdownSeconds = 10;
+        let countdownSeconds = 15;
         let countdownTimerId = null;
         let isRedirecting = false;
 
@@ -325,17 +288,7 @@
             startAutoSlider();
             startGroupChatSimulation();
             startAutoRedirectCountdown();
-            setInterval(spawnHeartParticle, 1500);
-
-            document.body.addEventListener('click', function(e) {
-                if (!e.target.closest('button') && !e.target.closest('a')) {
-                    spawnLipsAtPosition(e.clientX, e.clientY);
-                }
-            });
-
-            setTimeout(function() {
-                showToastNotification("Emily Watson sent a photo!", "Click 'ENTER APP' to open and view the snap 💋");
-            }, 5000);
+            setInterval(spawnHeartParticle, 2000);
         };
 
         function startAutoRedirectCountdown() {
@@ -390,7 +343,7 @@
                 img.id = 'slide-' + index;
                 img.className = 'absolute inset-0 w-full h-full object-cover slide-transition ' + (index === 0 ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 z-0');
                 img.onerror = function() {
-                    this.src = `https://placehold.co/600x800/ffd1d1/c9184a?text=${profile.name}`;
+                    this.src = 'https://placehold.co/600x800/ffd1d1/c9184a?text=' + encodeURIComponent(profile.name);
                 };
                 container.appendChild(img);
 
@@ -473,11 +426,11 @@
                 chatBox.scrollTop = chatBox.scrollHeight;
                 chatMessageIndex++;
 
-                var nextDelay = 3000 + Math.random() * 2500;
+                var nextDelay = 3500 + Math.random() * 3000;
                 setTimeout(addNewMessage, nextDelay);
             }
 
-            setTimeout(addNewMessage, 1000);
+            setTimeout(addNewMessage, 1500);
         }
 
         function showToastNotification(title, description) {
@@ -495,32 +448,16 @@
         function spawnHeartParticle() {
             var container = document.getElementById('heart-container');
             var heart = document.createElement('div');
-            heart.innerHTML = Math.random() > 0.5 ? '❤️' : '💖';
-            heart.className = 'heart-particle text-pink-400/40 text-sm';
+            heart.innerHTML = Math.random() > 0.5 ? '&#10084;&#65039;' : '&#128150;';
+            heart.className = 'heart-particle text-pink-400/30 text-sm';
             var startX = Math.random() * 100;
             var duration = 3 + Math.random() * 3;
-            var size = 12 + Math.random() * 16;
+            var size = 10 + Math.random() * 14;
             heart.style.left = startX + 'vw';
             heart.style.animationDuration = duration + 's';
             heart.style.fontSize = size + 'px';
             container.appendChild(heart);
             setTimeout(function() { heart.remove(); }, duration * 1000);
-        }
-
-        function spawnLipsAtPosition(x, y) {
-            var container = document.getElementById('heart-container');
-            var lips = document.createElement('div');
-            lips.innerHTML = '💋';
-            lips.className = 'absolute text-red-500/90 pointer-events-none transition-all duration-1000 ease-out z-50';
-            lips.style.left = (x - 10) + 'px';
-            lips.style.top = (y - 10) + 'px';
-            lips.style.fontSize = (18 + Math.random() * 12) + 'px';
-            container.appendChild(lips);
-            setTimeout(function() {
-                lips.style.transform = 'translate(' + ((Math.random() - 0.5) * 150) + 'px, -150px) scale(0)';
-                lips.style.opacity = '0';
-            }, 40);
-            setTimeout(function() { lips.remove(); }, 1050);
         }
     </script>
 </body>
